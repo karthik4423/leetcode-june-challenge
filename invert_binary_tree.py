@@ -1,6 +1,6 @@
-'''
+"""
 Invert a binary tree.
-'''
+"""
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -9,7 +9,7 @@ Invert a binary tree.
 #         self.right = right
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
-        if root==None:
+        if root == None:
             return
-        root.left,root.right=self.invertTree(root.right),self.invertTree(root.left)
+        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
         return root
